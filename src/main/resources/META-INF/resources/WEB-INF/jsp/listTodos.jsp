@@ -12,31 +12,32 @@
 </head>
 <body>
 <div class="container">
-<div>
-<h1> Again Welcome to in28minutes</h1>
-    <h2>your Todos are  ${name}:</h2>
-    <h3>
-        <table class="table">
-            <tr>
-                <th>id</th>
-                <th>Description</th>
-                <th>Target Date</th>
-                <th>Is Done?</th>
-            </tr>
-            <tbody>
-            <c:forEach items="${todos}" var="todo">
-            <tr>
-                <td>${todo.id}</td>
-                <td>${todo.description}</td>
-                <td>${todo.targetDate}</td>
-                <td>${todo.done}</td>
-            </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+    <div>
+        <h1> Again Welcome to in28minutes</h1>
+        <h2>your Todos are ${name}:</h2>
+        <h3>
+            <table class="table">
+                <tr>
+                    <th>id</th>
+                    <th>Description</th>
+                    <th>Target Date</th>
+                    <th>Is Done?</th>
+                </tr>
+                <tbody>
+                <c:forEach items="${todos}" var="todo">
+                    <tr>
+                        <td>${todo.id}</td>
+                        <td>${todo.description}</td>
+                        <td>${todo.targetDate}</td>
+                        <td>${todo.done}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+            <a href="add-todo" type="button" class="btn btn-success">Add Todo</a>
 
-    </h3>
-</div>
+        </h3>
+    </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
