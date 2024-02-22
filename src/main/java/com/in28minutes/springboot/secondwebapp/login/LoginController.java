@@ -10,18 +10,18 @@ import org.springframework.web.bind.annotation.*;
 @SessionAttributes("name")
 @Controller
 public class LoginController {
+    Logger logger = LoggerFactory.getLogger(getClass());
     //    @Autowired
     private AuthenticationService authenticationService;
-    Logger logger = LoggerFactory.getLogger(getClass());
 
     public LoginController(AuthenticationService authenticationService) {
         this.authenticationService = authenticationService;
     }
 
-    @GetMapping("/login")
+    @GetMapping("/")
     public String goToLoginPage() {
         logger.debug("I'm in Get-------------------");
-        return "/login";
+        return "/welcome";
     }
 
     @PostMapping("/login")
